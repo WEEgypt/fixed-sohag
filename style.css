@@ -1,68 +1,57 @@
 :root {
-    --bg: #f2f2f2;
-    --mainDiv: #fff;
-    --color: #2d3737;
+    --bg: #fff;
+    --color: #000;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #000;
-        --mainDiv: #2d3737;
         --color: #fff;
     }
 }
 html {
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100%;
 }
 body {
-    font-family: verdana;
-    font-size: 14px;
     margin: auto;
     min-width: max-content;
-    width: max-content;
-    color: var(--color);
-    padding: 10px;
-    background-color: var(--bg);
+    padding: 20px;
+    font-family: verdana;
+    font-size: 14px;
     line-height: 26px;
+    color: var(--color);
+    background-color: var(--bg);
 }
 h2 {
     text-align: center;
     padding: 0px 0px 10px 0px;
 }
 label {
-    display: inline-block;
-    width: 110px;
     font-size: 12px;
+    position: relative;
+    right: 5%;
 }
-input {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
+#day,
+#month,
+#year {
+    width: 64px !important;
+}
+td {
+    height: 28px;
 }
 select {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
-    min-width: 90px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+select:focus {
+    outline-style: auto;
 }
 button {
     float: right;
 }
-
-select:focus {
-    outline-style: auto;
-}
-.mainDiv {
-    background-color: var(--mainDiv);
-    padding: 34px 34px 25px 34px;
-}
-.footer {
-    text-align: center;
-    font-size: 9px;
-    padding-top: 8px;
-}
-.header {
-    height: 36px;
+input {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -74,6 +63,23 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+textarea {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
+    resize: none;
+    height: 50px;
+    position: relative;
+    top: 6px;
+    bottom: 6px;
+}
 #another {
     margin-right: 6px;
+}
+.header {
+    height: 36px;
+}
+.footer {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 8px;
 }
